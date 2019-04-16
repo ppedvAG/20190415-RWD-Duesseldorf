@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Units</title>
+    <style>
+        /* px */
+        #pixel {
+            font-size: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        /* % */
+        #prozent {
+            font-size: 10%;
+            padding: 10%;
+            border-radius: 10%;
+        }
+
+        /* em */
+        #em {
+            font-size: 1em;
+            padding: 1em;
+            border-radius: 1em;
+        }
+
+        /* rem */
+        #rem {
+            font-size: 1rem;
+            padding: 1rem;
+            border-radius: 1rem;
+        }
+
+        /* vw */
+        #vw {
+            font-size: 1vw;
+            padding: 1vw;
+            border-radius: 1vw;
+        }
+
+        /* vh */
+        #vh {
+            font-size: 1vh;
+            padding: 1vh;
+            border-radius: 1vh;
+        }
+
+        /* vmin */
+        #vmin {
+            font-size: 1vmin;
+            padding: 1vmin;
+            border-radius: 1vmin;
+        }
+
+        /* vmax */
+        #vmax {
+            font-size: 1vmax;
+            padding: 1vmax;
+            border-radius: 1vmax;
+        }
+
+        /* fr */
+        /* cm */
+        /* 16px ist default und damit 1em */
+        p {
+            font-size: 1em; 
+        }
+        body {
+            font-size: 20px;
+        }
+        /* keine Wirkung über Pixel, aber über rem doch*/
+        html {
+            font-size: 40px;
+        }
+        div {
+            border: thin solid lightcoral;
+        }
+        #gridcontainer {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-gap: 1vmin;
+        }
+        #gridcontainer div {
+            background-color: lightcoral;
+        }
+    
+    </style>
+</head>
+<body>
+    text in body
+    <p>paragraph</p>
+
+    <!-- (div[id=""]>h1+p{lorem10})*8 -->
+    <div id="pixel">
+        <h1>Pixel</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, vel!</p>
+    </div>
+    <div id="prozent">
+        <h1>Prozent</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, est.</p>
+    </div>
+    <div id="em">
+        <h1>Em</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, adipisci.</p>
+    </div>
+    <div id="rem">
+        <h1>rem</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, ipsum!</p>
+    </div>
+    <div id="vw">
+        <h1>Viewport width</h1>
+        <p>1vw = 1% von viewport width. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, debitis?</p>
+    </div>
+    <div id="vh">
+        <h1>Viewport height</h1>
+        <p>1vh = 1% von viewport height. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, accusamus?</p>
+    </div>
+    <div id="vmin">
+        <h1>viewport min</h1>
+        <p>1vmin = 1vw oder vh je nachdem, was davon kleiner ist.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, totam.</p>
+    </div>
+    <div id="vmax">
+        <h1>viewport max</h1>
+        <p>1vmax = 1vw oder vh je nachdem, was davon größer ist. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, nam.</p>
+    </div>
+    <h1>fraction</h1>
+    <div id="gridcontainer">
+        <div>div in grid</div>
+        <div>div in grid</div>
+        <div>div in grid</div>
+    </div>    
+</body>
+text in html
+</html>

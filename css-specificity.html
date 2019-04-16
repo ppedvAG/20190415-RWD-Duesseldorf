@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <style src="./css-specificity.css"></style> -->
+    <style>
+      #pId {
+        color: darkorange;
+      }
+      * {
+        color: fuchsia;
+      }
+    </style>
+    <link rel="stylesheet" href="./css-specificity.css" />
+
+    <title>Spezifität</title>
+  </head>
+  <body>
+    <p id="pId" class="pClass" style="color: gold !important">Paragraph</p>
+    <h3>Priorität / Spezifität</h3>
+    <ol>
+      <li>CSS id !important</li>
+      <li>CSS class !important</li>
+      <li>CSS type !important</li>
+      <li>JS: pId.style.color = "hotpink";</li>
+      <li>CSS inline: style="color: gold"</li>
+      <li>CSS id intern oder extern: #pId {color:blue;}</li>
+      <li>CSS class intern oder extern: .pClass {color:crimson;}</li>
+      <li>CSS type intern oder extern: p {color:brown;}</li>
+    </ol>
+    <p>bei inline wird !important nicht angewendet.</p>
+    <p>mit :not() lässt sich Spezifität steigern</p>
+    <script>
+      pId.style.color = "hotpink";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 10% 5% 50% 25% 10%;
+            height: 100vh;
+        }
+        @media (max-width: 720px) {
+            body {
+                grid-template-areas:
+                "h h h"
+                "n n n"
+                "c c c"
+                "a a a"
+                "f f f";
+            }
+
+        }
+        @media (min-width: 721px) and (max-width: 960px) {
+            body {
+                grid-template-areas:
+                "h h h"
+                "n c c"
+                "n c c"
+                "a a a"
+                "f f f";
+            }
+        }
+        @media (min-width: 961px) {
+            body {
+                grid-template-areas:
+                "h h h"
+                "n c a"
+                "n c a"
+                "n c a"
+                "f f f";
+            }
+        }
+        header {
+            grid-area: h;
+            background-color:darkblue;
+            color: white;
+        }
+        nav {
+            grid-area: n;
+            background-color:darkgray;
+            color: white;
+        }
+        #content {
+            grid-area: c;
+            background-color:lightblue;
+        }
+        aside {
+            grid-area: a;
+            background-color:lightseagreen;
+        }
+        footer {
+            grid-area: f;
+            background-color:lightslategrey;
+            color: white;
+        }
+    </style>
+    <title>Grid Areas</title>
+</head>
+<body>
+    <header>Header</header>
+    <nav>Nav</nav>
+    <div id="content">Content</div>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+    
+</body>
+</html>

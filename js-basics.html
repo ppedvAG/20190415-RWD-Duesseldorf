@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS Grundlagen</title>
+  </head>
+  <body>
+    <div>
+      <h1>Überschrift</h1>
+      <p id="output">Paragraph zum Ausgeben von Werten</p>
+      <button oncklick="showFirstname()">Zeige den Vorname</button
+      ><img src="" alt="" />
+    </div>
+
+    <script>
+      /* Datentypen: string, number, boolean */
+      /* string wird geschrieben in "" oder '' oder `` */
+      /* number wird geschrieben z.B. 39 */
+      /* boolean kann nur zwei Werte haben: true oder false */
+      let l; //Variablen deklarieren
+      /* = ist ein Zuweisungsoperator, er ist binär */
+      l = 39; //Variablen initialisieren, sprich einen Wert zuweisen
+      let text = "Wert der Variable l: "; //Variablen deklarierung und initialisieren
+
+      output.innerHTML = text + l;
+      /* OBJEKTE */
+      let einePerson = {
+        vorname: "Max",
+        nachname: "Mustermann",
+        kind: {vorname:"Kevin",nachname:"Mustermann"}
+      };
+      
+
+      einePerson.vorname = "Franz";
+      console.log(output);
+
+      /* FUNKTIONEN */
+      /* Deklaration einer Funktion */
+      function showFirstname() {
+        output.innerHTML = einePerson.vorname;
+      }
+      /* Aufruf einer Funktion */
+      //showFirstname();
+    </script>
+  </body>
+</html>

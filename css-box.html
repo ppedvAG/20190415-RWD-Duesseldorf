@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Box Model</title>
+    <style>
+    * {
+        border: thick solid thistle;        
+    }
+    div {
+        height: 300px;
+    }
+    p {
+        /* margin: 5px; */
+        padding: 5px;
+        height: 100px;
+        margin: 0;
+        /* damit beinhaltet die Höhe auch den Rahmen */
+        box-sizing: border-box;
+
+    }
+    /* margin bei Geschwisterelementen wird nicht zusammenaddiert, 
+    also in diesem Beispiel nicht 10px, sondern 5px */
+    span {
+        margin: 10px;
+        padding: 10px;
+    }
+    /* body hat per default margin 5px */
+    /* body {
+        margin: 0;
+    } */
+
+    /* box-sizing */
+    </style>
+</head>
+<body>
+    <!-- div>(p{paragraph}>span{span}*3)*3 -->
+    <div>
+        <p>
+            paragraph
+            <span>span</span>
+            <span>span</span>
+            <span>span</span>
+        </p>
+        <p>
+            paragraph
+            <span>span</span>
+            <span>span</span>
+            <span>span</span>
+        </p>
+        <p>
+            paragraph
+            <span>span</span>
+            <span>span</span>
+            <span>span</span>
+        </p>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Selektoren</title>
+    <style>
+      /* Element-Selektoren */
+      p {
+        color: red;
+      }
+
+      /* id-Selektor */
+      #pId {
+        border: thin solid;
+      }
+
+      /* class-Selektor */
+      .pClass {
+        border: thin dotted;
+        border-radius: 10px;
+      }
+
+      /* Attribut-Selektor */
+      *[onclick]::after {
+        content: "text nach Elementen mit onclick"
+      }
+      /* zu img wird content hinzugefügt. aber zu Attribut alt oder woanders? */
+
+      /* KOMBINATOREN */
+      /* Auflistung */
+      h1, p {
+        text-decoration: underline;
+      }
+      /* Elternelement Kindelement */
+      div p {      
+        font-size: 1.5em;
+      }
+      /* ODER: */
+      div>p {
+        font-size: 1.5em;
+      }
+
+      /* unmittelbare Geschwister */
+      h1+p {
+        color:crimson;
+      }
+
+      /* PSEUDO SELEKTOREN */
+      /* Pseudoelemente ::*/
+      p::first-letter {
+        font-family: fantasy;
+      }
+
+      /* Pseudoklassen :*/
+      img:hover {
+        width: 300px;
+        height: 300px;
+      }
+
+      /* :nth-child() */
+      /* Nummerierung wird bei alles Geschwistern von Paragraphen angewendet  */
+      /* auch Enkelelemente werden mit berücksichtigt */
+      p:nth-child(2) {
+        background-color:deepskyblue;
+      }
+      /* auch formeln :nth-child(an+b) z.B. (2n) */
+
+
+      /* :nth-of-type() */
+      /* Nummerierung wird nur bei Paragraphen angewendet  */
+      p:nth-of-type(2) {
+        background-color:fuchsia;
+      }
+
+      /* :not(selector) */
+      /* selector:not(selector) */
+      p:not(#pId) {
+        font-style:italic;
+      }
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>heading1</h1>
+      <p class="pClass">paragraph mit class</p>
+      <p id="pId">paragraph mit id
+        <p>P in P, 4. Nachfolger in div</p>
+      </p>
+      <p class="pClass" onclick="myFunction()"
+      >paragraph mit class, 4. p als unmittelbares Kind in div</p>
+      <p>Paragraph als Kind in div</p>
+    </div>
+    <p>Paragraph außerhalb von division</p>
+    <div>
+      <!-- Kommentar -->
+      <a href="#">Link nach nirgendwo</a>
+      <img id="imgId"
+        src="http://picsum.photos/200?random"
+        alt="ein Bild"
+        onclick="myOtherFunction()"
+      />
+      <button onclick="myFunction()">BUTTON</button>
+      <p class="pClass">paragraph mit class, 4. Kind von div</p>
+      <p id="pId">paragraph mit id
+        <p>P in P</p>
+      </p>
+      <p class="pClass" onclick="myFunction()"
+      >paragraph mit class</p>
+    </div>
+    <script>
+      function myFunction() {
+        console.log("myFunction meldet sich");
+      }
+      let myImg = document.getElementsByName('img');
+      console.log("myImg: " + myImg); //[object NodeList]
+      console.log("myImg[0]: " + myImg[0]); //undefined
+      console.log("imgId: " + imgId);
+      for (let x in imgId) {
+        console.log("x:" + x);
+      }
+    </script>
+  </body>
+</html>

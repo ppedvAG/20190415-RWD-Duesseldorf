@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+    <title>Picture Element</title>
+  </head>
+  <body>
+    <picture>
+      <source
+        media="(min-width: 600px)"
+        srcset="http://picsum.photos/400/400?random1"
+      />
+      <source
+        media="(min-width: 500px)"
+        srcset="http://picsum.photos/500/500?random3"
+      />
+      <img src="http://picsum.photos/400/400?random1" alt="ein Bild" style="max-width: 100%"/>
+    </picture>
+
+    <h3>Bemerkungen</h3>
+    <p>width: auto - so viele Pixel breit, wie die Bildauflösung</p>
+    <p>width: 100% - maximal breit (evtl. verpixelt)</p>
+    <p>max-width: 100% - maximal breit, aber nicht breiter als Bildauflösung</p>
+  </body>
+</html>

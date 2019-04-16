@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        @media (orientation: landscape) {
+            p {
+                font-size: 1.5em;
+            }
+            #landscape::after {
+                content: " LANDSCAPE"
+            }
+            
+        }
+        @media (orientation: portrait) {
+            p {
+                font-size: 1em;
+            }
+            #portrait::after {
+                content: " PORTRAIT"
+            }
+            #zusatz {
+                display: none;
+            }
+        }
+    </style>
+    <title>Media Queries</title>
+</head>
+<body>
+
+    <h1>Überschrift 1</h1>
+    <p id="landscape">Breite größer als Höhe => </p>
+    <p id="portrait">Höhe größer als Breite => </p>
+
+    <p id="zusatz">Zusätzliche Infos</p>
+    
+</body>
+</html>

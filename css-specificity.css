@@ -1,0 +1,18 @@
+#pId {
+    color: blue;
+}
+.pClass {
+    color: crimson;
+}
+p {
+    color: aqua;
+    font-size: 2em;
+}
+p  {
+    color: brown !important;
+}
+p:not(ol)  {
+    color: moccasin !important;
+}
+
+

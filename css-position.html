@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Position</title>
+    <style>
+      /* static */
+      #static {
+        position: static;
+        background-color: lawngreen;
+        top: 100px;
+        left: 100px;
+      }
+      /* relative */
+      #relative {
+        position: relative;
+        background-color: lightsalmon;
+        top: 100px;
+        left: 100px;
+      }
+      /* absolute */
+      #absolute {
+        position: absolute;
+        background-color: lightslategray;
+        top: 100px;
+        left: 100px;
+      }
+      /* sticky */
+      #sticky {
+        position: sticky;
+        background-color: mediumturquoise;
+        top: 100px;
+        left: 100px;
+      }
+      /* fixed */
+      #fixed {
+        position: fixed;
+        background-color: orangered;
+        top: 100px;
+        left: 100px;
+      }
+      div {
+        height: 100px;
+      }
+      body,
+      p {
+        margin: 0;
+      }
+      /* p:not([id]) {
+        border: thin solid;
+        width: 100px;
+        height: 100px;
+      } */
+      .lorem {
+        font-size: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- p#static{static}+p#relative{relative}+p#absolute{absolute}+p#sticky{sticky}+p#fixed{fixed} -->
+    <p id="static">static. ist default. ignoriert top, left, bottom, right</p>
+    <!-- <p>test</p> -->
+    <p id="relative">
+      relative. akzeptiert top, left ect. Diese Koordinaten werden ab dem Punkt
+      gezählt, wo das Element ursprünglich sein sollte.
+    </p>
+    <!-- im Anfangszustand steht nach sticky -->
+    <p id="absolute">
+      absolute. so breit, wie inhalt. akzeptiert top, left ect. Diese
+      Koordinaten werden ab dem Koordinatenursprung des Root-Elements gezählt
+    </p>
+
+    <div>
+      <p class="lorem">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt,
+        voluptatem. Voluptas est odit exercitationem libero possimus minus eaque
+        aut dicta, iure fugit? Eos odio, rem suscipit voluptatem voluptates
+        mollitia corporis sequi magni molestias soluta eius quidem unde
+        quisquam, laudantium esse minima culpa! Molestiae reprehenderit aliquid
+        deserunt esse maxime asperiores laborum! Lorem, ipsum dolor sit amet
+        consectetur adipisicing elit. Eum velit vitae, quis ratione corrupti
+        omnis saepe quae deleniti eligendi rem sequi est nostrum obcaecati
+        similique atque, porro eos aliquam, neque iste quos quaerat hic!
+        Consequatur, maiores maxime ut reiciendis porro accusantium sed voluptas
+        molestiae quod at consectetur ad, optio dicta!
+      </p>
+      <p id="sticky">sticky</p>
+      <p id="fixed">
+        fixed. so breit, wie inhalt. akzeptiert top, left ect. Diese Koordinaten
+        werden ab dem Koordinatenursprung des Root-Elements gezählt
+      </p>
+    </div>
+    <div>
+      <p class="lorem">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+        voluptatibus recusandae fugit provident deserunt minus sunt, distinctio
+        possimus est numquam expedita et atque natus iusto autem modi omnis
+        laborum ab sapiente asperiores ipsum! Amet hic harum laudantium iure.
+        Asperiores fuga dolorum ad quo in consequuntur libero, dolorem maxime
+        perspiciatis ullam. Velit facilis corrupti voluptates eum. Consectetur
+        quo atque commodi nemo, odio temporibus dolorem porro eligendi delectus
+        neque enim incidunt unde reiciendis error sunt nihil. Modi consequuntur
+        quidem, aut iure inventore voluptatem dolorum! Quae at veniam sit quo
+        enim alias impedit ex adipisci inventore perferendis! Beatae laborum,
+        velit aliquam amet, fugit optio maiores animi tempora corrupti excepturi
+        in quis, incidunt asperiores! Laudantium eaque illo, delectus tempora,
+        veritatis nihil facilis eum explicabo recusandae maxime cum iusto
+        inventore consequatur culpa nisi eveniet qui nobis atque! Aliquam
+        architecto ipsa error deleniti! Voluptas, adipisci magnam. Ipsa, autem
+        dolor aut tempore aliquid dolore beatae ducimus aliquam doloremque
+        consequuntur quae. Dignissimos dolor ipsa veritatis obcaecati blanditiis
+        earum dolorem eius vitae sapiente tenetur vero nemo magnam, non in.
+        Consequatur nobis autem exercitationem a consectetur, delectus odio
+        commodi culpa fuga veniam ratione corrupti incidunt enim in hic
+        accusantium beatae natus cumque, magnam at. Atque amet quia quas quae
+        odit nulla saepe pariatur perferendis nisi accusantium, beatae et
+        doloribus rem necessitatibus quaerat dolore odio. Eligendi, harum!
+        Voluptate ex vitae officiis repellat quos ut deleniti ratione ducimus
+        eaque ipsum assumenda, veritatis error veniam officia. Animi eius
+        necessitatibus, optio inventore id quos dolor laboriosam ducimus.
+        Asperiores odit nostrum distinctio? Magnam totam, ullam excepturi
+        voluptas fugiat, tenetur aut nesciunt magni alias vitae dolores ab culpa
+        maxime. A aliquam facere culpa reiciendis deserunt, obcaecati voluptas
+        corrupti animi fugit, eveniet explicabo blanditiis distinctio voluptatem
+        quia voluptatum sunt maxime nemo dolorem doloribus, consequuntur ullam
+        vero. Soluta recusandae, eum aperiam deleniti natus quo hic ex corrupti
+        illum dolore voluptate minus dolorem, assumenda laborum magnam sed.
+        Incidunt id corrupti facilis reiciendis repellendus quibusdam atque eius
+        dolorum molestiae, maiores, nam ab voluptas dolore laborum, hic vel
+        adipisci a! Ab, repellendus ducimus! Nisi eaque provident placeat earum
+        illum! Debitis voluptas voluptate, neque asperiores at modi recusandae
+        rem nesciunt quam ullam cupiditate animi labore adipisci aut nihil
+        magnam molestiae facilis. Impedit libero numquam dolorum sed aperiam
+        tempore. A dolores, libero eius accusantium voluptatibus facere
+        suscipit. Natus nihil modi labore magni voluptatum in tempore incidunt
+        laboriosam ut amet corrupti voluptatem optio quaerat, saepe ipsa facere
+        laudantium beatae tempora? Et voluptatibus laboriosam dignissimos sit
+        sunt, ab doloribus placeat rem, facere ratione perferendis delectus? Et
+        doloremque veniam hic voluptatum eligendi libero natus. Laboriosam
+        labore quisquam iusto debitis accusamus? Quae, et optio. Non eius dicta
+        doloribus tenetur vel exercitationem possimus ducimus eum et, amet minus
+        odio ad, perspiciatis nobis quis maxime ullam hic. Quam sapiente
+        accusantium tenetur nulla, rerum itaque, laudantium unde quo aspernatur
+        voluptates tempora dolorum ducimus sed error nesciunt, aut cum nisi odio
+        aliquid! Id asperiores consequuntur soluta dolor totam dolores ab,
+        nesciunt corrupti culpa dolorem non neque provident cum architecto atque
+        porro aperiam consectetur magni ipsa vel velit sapiente ut a reiciendis.
+      </p>
+    </div>
+  </body>
+</html>

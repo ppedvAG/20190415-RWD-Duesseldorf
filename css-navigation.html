@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      @media (orientation: landscape) {
+        ul {
+          width: 100%;
+          list-style-type: none; /* Punkte */
+          padding-left: 0;
+          box-sizing: border-box;
+        }
+        li {
+          float: left;
+          width: 25%;
+          box-sizing: border-box;
+          padding: 0;
+          text-align: center;
+        }
+        li a {
+          text-decoration: none;
+          display: inline-block;
+          width: 100%;
+          height: 3em;
+          margin: 0;
+          font-size: 1em;
+          box-sizing: border-box;
+          color: black;
+          background-color: rgb(198, 240, 198);
+          padding: 1em 0em;
+          transition: background-color ease-in 0.5s;
+        }
+
+        li a:hover {
+          color: white;
+          background-color: rgb(235, 194, 235);
+        }
+        #burger {
+          display: none;
+        }
+      }
+      @media (orientation: portrait) {
+        ul {
+          display: none;
+        }
+        li {
+          display: none;
+        }
+        #burger {
+          display: block;
+        }
+        #kaese {
+            
+          position: relative;
+          cursor: pointer;
+          background-color: black;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        /* div [class^="line"] */
+        .line-top,
+        .line-middle,
+        .line-bottom {
+          position: absolute;
+          display: block;
+          height: 4px;
+          width: 36px;
+          border-radius: 2px;
+          background-color: white;
+        }
+        .line-top {
+            top: 11px;
+        }
+        .line-middle {
+            top: 23px;
+        }
+        .line-bottom {
+            top: 35px;
+        }
+      }
+    </style>
+    <title>Navigation</title>
+  </head>
+  <body>
+    <nav>
+      <!-- ul>(li>a[href="https://ppedv.de"]{LINK})*4 -->
+      <ul>
+        <li><a href="https://ppedv.de">LINK</a></li>
+        <li><a href="https://ppedv.de">LINK</a></li>
+        <li><a href="https://ppedv.de">LINK</a></li>
+        <li><a href="https://ppedv.de">LINK</a></li>
+      </ul>
+      <div id="burger">
+        <div id="kaese">
+          <div class="line-top"></div>
+          <div class="line-middle"></div>
+          <div class="line-bottom"></div>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>

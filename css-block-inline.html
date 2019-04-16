@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inline & Block Elemente</title>
+    <style>
+        div, p {
+            border: thick solid grey;
+            /* block-Elemente kann man zu inline verwandeln. 
+            und umgekehrt*/
+            /* display: inline; */
+            /* width: 300px;
+            height: 50px; */
+
+        }
+        span {
+            border: thin dotted gainsboro;
+            /* margin bei inline wird nur links und rechts angewendet */
+            margin: 10px;
+            /* inline ignorieren Maßangaben. 
+            sie sind so breit und hoch, wie der Inhalt */
+            width: 300px;
+            height: 50px;
+        }
+        .item {
+            /* inline-block stehen in der gleichen Zeile wie inline, 
+            akzeptieren aber Breite und Höhe, wie block */
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color:indianred;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Unterschiede zw. Block & Inline</h1>
+        <!-- div>(p{paragraph}>span{span}*3)*3 -->
+        <div>
+                <div>div in div</div>
+            <p>
+                paragraph
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                
+            </p>
+            <p>paragraph</p>
+            <div>div in p</div>
+            <!-- p übernimmt keine weiteren Blockelemente,
+            sie werden als Geschwister dargestellt -->
+            <p>
+                paragraph
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+            </p>
+            <p>
+                paragraph
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+                <span>span</span>
+            </p>
+        </div>
+
+        <h1>Inline-Block</h1>
+        <!-- div#wrapper>div.item{inline-block}*3 -->
+        <div id="wrapper">
+            <div class="item">inline-block</div>
+            <div class="item">inline-block</div>
+            <div class="item">inline-block</div>
+        </div>
+
+        <h1>weitere Beispiele für inline-Elemente</h1>
+        <label for="">Name: </label><input type="text">
+        <label for="">Vorname: </label><input type="text">
+        
+</body>
+</html>

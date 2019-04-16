@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        td {
+            border: thick groove grey;
+            padding: 1em;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        tr:nth-child(2n) {
+            background-color:gainsboro;
+        }
+        tr:nth-child(2n-1) {
+            background-color:rgb(197, 197, 197);
+        }
+        tr:only-child {
+            background-color: rgb(121, 121, 121);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- table>(thead>tr>th{TH $}*6)+(tbody>(tr>td{table data $$}*6)*5) -->
+    <table>
+        <thead>
+            <tr>
+                <th>TH 1</th>
+                <th>TH 2</th>
+                <th>TH 3</th>
+                <th>TH 4</th>
+                <th>TH 5</th>
+                <th>TH 6</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>table data 01</td>
+                <td>table data 02</td>
+                <td>table data 03</td>
+                <td>table data 04</td>
+                <td>table data 05</td>
+                <td>table data 06</td>
+            </tr>
+            <tr>
+                <td>table data 01</td>
+                <td>table data 02</td>
+                <td>table data 03</td>
+                <td>table data 04</td>
+                <td>table data 05</td>
+                <td>table data 06</td>
+            </tr>
+            <tr>
+                <td>table data 01</td>
+                <td>table data 02</td>
+                <td>table data 03</td>
+                <td>table data 04</td>
+                <td>table data 05</td>
+                <td>table data 06</td>
+            </tr>
+            <tr>
+                <td>table data 01</td>
+                <td>table data 02</td>
+                <td>table data 03</td>
+                <td>table data 04</td>
+                <td>table data 05</td>
+                <td>table data 06</td>
+            </tr>
+            <tr>
+                <td>table data 01</td>
+                <td>table data 02</td>
+                <td>table data 03</td>
+                <td>table data 04</td>
+                <td>table data 05</td>
+                <td>table data 06</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

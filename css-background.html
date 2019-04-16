@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      div {
+        font-size: 4em;
+        background-image: url("http://picsum.photos/400/400?random");
+        /* default, Bild in Originalgröße */
+        /* background-size: auto; */
+        /* ? */
+        /* background-size: contain; */
+        /* aufspannen auf ganze Breite: */
+        /*  */
+        border: 2px solid white;
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-repeat: repeat; */
+        /* nur eine Zeile ist gefüllt: */
+        /* background-repeat: repeat-x; */
+        /* nur eine Spalte ist gefüllt: */
+        /* background-repeat: repeat-y; */
+        /* ?: */
+        /* background-repeat: round; */
+        /* Bildauflösung beibehalten plus evtl Abstand dazwischen */
+        /* background-repeat: space; */
+        background-color: magenta;
+      }
+    </style>
+    <title>Responsive Background</title>
+  </head>
+  <body>
+    <div style="width: 80%">
+      bei div ist Background innerhalb vom Rahmen, bei body aber auch außerhalb
+    </div>
+  </body>
+</html>

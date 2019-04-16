@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emmet Plugin</title>
+    <style>
+        div {
+            /* bcc */
+            background-color: #fff;
+        }
+        p {
+            /* pos:r */
+            position: relative;
+            /* ff */
+            font-family: serif;
+        }    
+    </style>
+</head>
+<body>
+    <!-- Eltern-Kind Elemente  -->
+    <!-- div>p*3 -->
+    <div>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+
+    <!-- IDs -->
+    <!-- div#container>p*3 -->
+    <div id="container">
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+
+    <!-- Nummerierung -->
+    <!-- div#container>p#pId$*3 -->
+    <div id="container">
+        <p id="pId1"></p>
+        <p id="pId2"></p>
+        <p id="pId3"></p>
+    </div>
+
+    <!-- Klassen -->
+    <!-- div.container>p*3 -->
+    <div class="container">
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+
+    <!-- Attribute -->
+    <!-- div>img[src="http://picsum.photos/200/300?random$"][alt="alt text"]*3 -->
+    <div>
+        <img src="http://picsum.photos/200/300?random1" alt="alt text">
+        <img src="http://picsum.photos/200/300?random2" alt="alt text">
+        <img src="http://picsum.photos/200/300?random3" alt="alt text">
+    </div>
+
+    <!-- Inhalt -->
+    <!-- div.container>h1{Abschnitt $$}*3 -->
+    <div class="container">
+        <h1>Abschnitt 01</h1>
+        <h1>Abschnitt 02</h1>
+        <h1>Abschnitt 03</h1>
+    </div>
+    
+</body>
+</html>

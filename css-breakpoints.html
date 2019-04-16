@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            margin: 0;
+        }
+        @media (max-width: 150px) {
+            #xs {
+                display: block;
+                content: "klein";
+            }
+            #sm {
+                display: none;
+            }
+            #md {
+                display: none;
+            }
+            #lg {
+                display: none;
+            }
+            #xl {
+                display: none;
+            }
+
+        }
+        @media (min-width: 151px) and (max-width: 300px) {
+            #xs {
+                display: block;
+                visibility: hidden;
+            }
+            #sm {
+                display: block;
+            }
+            #md {
+                display: none;
+            }
+            #lg {
+                display: none;
+            }
+            #xl {
+                display: none;
+            }
+
+        }
+        @media (min-width: 301px) and (max-width: 450px) {
+            #xs {
+                display: block;
+                visibility: hidden;
+            }
+            #sm {
+                display: block;
+                visibility: hidden;
+            }
+            #md {
+                display: block;
+            }
+            #lg {
+                display: none;
+            }
+            #xl {
+                display: none;
+            }
+        }
+        @media (min-width: 451px) and (max-width: 600px) {
+            #xs {
+                display: block;
+                visibility: hidden;
+            }
+            #sm {
+                display: block;
+                visibility: hidden;
+            }
+            #md {
+                display: none;
+            }
+            #lg {
+                display: none;
+            }
+            #xl {
+                display: none;
+            }
+        }
+        @media (min-width: 151px) and (max-width: 300px) {}
+        div {
+            width: 150px;
+            height: 150px;
+            background-color:indianred;
+            color: white;
+            float: left;
+        }
+    
+    </style>
+    <title>Breakpoints</title>
+</head>
+<body>
+    <div id="xs">xs - extra small</div>
+    <div id="sm">sm - small</div>
+    <div id="md">md - medium</div>
+    <div id="lg">lg - large</div>
+    <div id="xl">xl - extra large</div>
+    
+    
+</body>
+</html>
